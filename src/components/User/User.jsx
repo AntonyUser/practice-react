@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
+import { Text, SpannedText } from './User.style';
 
 export const User = ({ name, email }) => {
+  const isTrue = email.endsWith('biz');
   return (
     <>
-      <p>
-        Name: <span>{name}</span>
-      </p>
-      <p>
-        Email: <span>{email}</span>
-      </p>
+      <Text>
+        Name: <SpannedText>{name}</SpannedText>
+      </Text>
+      <Text>
+        Email: <SpannedText isRed={isTrue}>{email}</SpannedText>
+      </Text>
     </>
   );
 };

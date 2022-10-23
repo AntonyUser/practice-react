@@ -2,6 +2,7 @@ import { users } from '../Data/users';
 import { User } from '../components/User/User';
 import { UsersList } from '../components/UsersList/UsersList';
 import { Section } from '../components/Section/Section';
+import { GlobalStyle } from '../../src/Utils/GlobalStyle';
 
 const element = users[0];
 const { name, email } = element;
@@ -14,6 +15,7 @@ export const App = () => {
       <Section title="List of Users">
         <UsersList users={users} />
       </Section>
+      <GlobalStyle />
     </>
   );
 };
